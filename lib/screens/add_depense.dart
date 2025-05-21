@@ -31,14 +31,14 @@ class _AddPage extends State<AddPage> {
 
     Navigator.pop(context, newdepense);
   }
-  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Ajouter une tâche'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -74,6 +74,7 @@ class _AddPage extends State<AddPage> {
                   return null;
                 },
               ),
+              //
               TextFormField(
                 controller: _date,
                 decoration: const InputDecoration(
@@ -81,6 +82,7 @@ class _AddPage extends State<AddPage> {
                   border: OutlineInputBorder(),
                 ),
                 maxLines: 3,
+
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Veuillz rentrer la date';
@@ -114,7 +116,7 @@ class _AddPage extends State<AddPage> {
               ElevatedButton(
                 onPressed: _submitForm,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
